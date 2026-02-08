@@ -1,0 +1,25 @@
+# EnKiteDDI Requirements
+# Python 3.8+
+
+# Deep Learning Framework
+torch>=1.8.0
+
+# Data Processing
+numpy>=1.19.0
+pandas>=1.2.0
+
+# Machine Learning
+scikit-learn>=0.24.0
+
+# Chemistry (RDKit)
+# Note: RDKit is best installed via conda:
+#   conda install -c conda-forge rdkit
+# Or via pip (may not work on all systems):
+rdkit-pypi>=2021.3.1
+
+# Utilities
+tqdm>=4.60.0
+
+# Optional but recommended
+scipy>=1.6.0
+
