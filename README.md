@@ -11,7 +11,6 @@ This project provides 8-dim and 9-dim versions of the EnKiteDDI model, which int
 - [Data Preparation](#data-preparation)
 - [Usage](#usage)
 - [Model Architecture](#model-architecture)
-- [Citation](#citation)
 
 ## Overview
 
@@ -61,6 +60,42 @@ Or via pip:
 ```bash
 pip install rdkit-pypi
 ```
+
+### KiteDDI Dependency Modules
+
+The training and evaluation scripts require the following Python modules from the **KiteDDI** project:
+
+- `build_vocab.py` - Vocabulary building module (for `WordVocab` class)
+- `utils.py` - Utility functions (for `split` function)
+- `resnet18.py` - ResNet18 model implementation
+
+**Download Steps:**
+
+1. **Clone or Download KiteDDI Repository**
+   - Visit: [KiteDDI GitHub Repository](https://github.com/azwad-tamir/KiteDDI)
+   - Clone the repository or download the source code
+
+2. **Copy Required Modules**
+   - Copy `build_vocab.py`, `utils.py`, and `resnet18.py` from the KiteDDI repository
+   - These files are typically located in the `models/KiteDDI/` directory
+
+3. **Set Up Directory Structure**
+   - Create a `KiteDDI` folder in the parent directory of this repository
+   - Place the copied files (`build_vocab.py`, `utils.py`, `resnet18.py`) in the `KiteDDI/` folder
+   - The directory structure should look like:
+     ```
+     parent_directory/
+     ├── KDD/                    # This repository
+     │   ├── train/
+     │   ├── eval/
+     │   └── ...
+     └── KiteDDI/                # KiteDDI dependency modules
+         ├── build_vocab.py
+         ├── utils.py
+         └── resnet18.py
+     ```
+
+**Note:** The scripts use `sys.path.append` to locate these modules. Make sure the `KiteDDI` folder is in the correct location relative to the script execution directory.
 
 ## Data Preparation
 
@@ -280,3 +315,7 @@ This project is licensed under the MIT License. See LICENSE file for details.
 - **KiteDDI**: Original KiteDDI implementation
 - **SemMedDB**: For providing knowledge graph data
 - **DRKG**: For providing drug knowledge graph
+
+## Contact
+
+For questions or suggestions, please open a GitHub Issue.
